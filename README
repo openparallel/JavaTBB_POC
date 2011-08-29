@@ -1,0 +1,16 @@
+TestNative Threads POC
+======================
+
+This is a POC that shows that Java applications can use Threaded Building Blocks (TBB) to manage threading according to TBBs paradigm. 
+Thread workers can be written in Java, and it's possible to build a library that gives the TBB functionality to ordinary Java (or Groovy, JRuby, Jython, Scala?) apps.
+
+To use:
+- you'll need the GCC toolchain and a JDK, configured into your path. Also, TBB configured.
+(You may need to edit the makefile for your version).
+
+- checkout the TestNativeThreads and nativethread projects
+
+- build nativethread (cd to nativethread/Debug and make)
+
+- run TestThread.main with the -Djava.library.path=<blah>/nativethread/Debug option to tell it where to find libraries
+
